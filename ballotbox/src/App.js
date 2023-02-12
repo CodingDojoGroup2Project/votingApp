@@ -12,6 +12,7 @@ import { useState } from 'react';
 import AdminLogReg from './components/AdminLogReg';
 import Footer from './components/Footer';
 
+
 function App() {
   const [admin, setAdmin] = useState({});
   const [submitted, setSubmitted] = useState(false);

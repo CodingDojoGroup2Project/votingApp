@@ -39,6 +39,22 @@ AdminSchema.pre('save',async function(next){
     }
 })
 
+module.exports = mongoose.model('Admin', AdminSchema);
+
+AdminSchema.virtual('confirmPassword')
+.get(()=>this._confirmPassword= value)
+.set(value=>this._confirmPassword = value)
+
+// password validation - password matches the confirm field
+
+AdminSchema.pre('validate', function(next) {
+    if(this.password!==this.confirmPassword) {
+        this.invalidate('confirmPassword','Password must match confirm password')
+    }
+    next()
+})
+ 
+ 
 // AdminSchema.pre('save',async function(next){
 //     try {
 //         // 10 is number of times to salt password
@@ -50,21 +66,6 @@ AdminSchema.pre('save',async function(next){
 //         console.log('Error in save', error)
 //     }
 // })
-
-module.exports = mongoose.model('Admin', AdminSchema);
-
-AdminSchema.virtual('confirmPassword')
-.get(()=>this._confirmPassword= value)
-.set(value=>this._confirmPassword = value)
-
-AdminSchema.pre('validate', function(next) {
-    if(this.password!==this.confirmPassword) {
-        this.invalidate('confirmPassword','Password must match confirm password')
-    }
-    next()
-})
- 
- 
 
 // MongoDB schema provides virtual
 // short term value

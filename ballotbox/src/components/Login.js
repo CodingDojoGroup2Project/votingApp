@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+// import {
+// 	List,
+// 	TextInput,
+// 	SimpleForm,
+// 	Edit,
+// 	Create,
+// 	ReferenceInput,
+// 	SelectInput,
+// 	Datagrid,
+// 	ReferenceField,
+// 	TextField,
+// 	EmailField,
+// 	EditButton,
+// 	EditGuesser, Admin
+//  } from 'react-admin';
+ 
+
 const Login = ({ setAdmin }) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -30,7 +47,7 @@ const Login = ({ setAdmin }) => {
 
 	return (
 		<div className="bg-div">
-			{/* <p className="text-3xl">Admin Login</p> */}
+			<p className="text-3xl">Admin Login</p>
 
 			{/* FORM STARTS */}
 			<div className="rotate">
@@ -84,3 +101,8 @@ const Login = ({ setAdmin }) => {
 };
 
 export default Login;
+
+// function Login() {
+// 	return (
+// 	)
+// }

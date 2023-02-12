@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CodingDojoGroup2Project/votingApp/issues"
   },
-  "homepage": "https://github.com/CodingDojoGroup2Project/votingApp#readme"
+  "homepage": "https://github.com/CodingDojoGroup2Project/votingApp#readme",
+  "dependencies": {
+    "ra-data-json-server": "^4.7.2"
+  }
 }

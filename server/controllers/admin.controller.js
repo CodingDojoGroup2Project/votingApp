@@ -17,6 +17,9 @@ module.exports = {
       }
   },
 
+  // user exists in database
+  // if not exists error
+  // validate entered password matches the one in the database
   loginAdmin:async (req, res)=> {
       const adminInDB = await Admin.findOne({email:req.body.email})
       if(!adminInDB) {

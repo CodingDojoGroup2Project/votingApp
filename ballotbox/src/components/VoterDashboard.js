@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import axios from 'axios'
 import '../main.css';
-import e from 'cors';
+// import e from 'cors';
 
 // Includes race count
 

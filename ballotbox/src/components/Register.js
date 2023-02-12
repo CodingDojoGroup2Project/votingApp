@@ -1,6 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+// import {
+// 	List,
+// 	TextInput,
+// 	SimpleForm,
+// 	Edit,
+// 	Create,
+// 	ReferenceInput,
+// 	SelectInput,
+// 	Datagrid,
+// 	ReferenceField,
+// 	TextField,
+// 	EmailField,
+// 	EditButton,
+// 	EditGuesser, Admin, PasswordInput
+//  } from 'react-admin';
+
 
 const Register = ({ setAdmin }) => {
 	const [firstName, setFirstName] = useState("");
@@ -156,3 +172,16 @@ const Register = ({ setAdmin }) => {
 };
 
 export default Register;
+
+// export const AdminRegister = props => (
+// 	<Create {...props}>
+// 		<SimpleForm>
+// 			<ReferenceInput source="adminId" reference="admin"><SelectInput optionText="id"/></ReferenceInput>
+// 			<TextInput source="id"/>
+// 			<TextInput source="firstName"/>
+// 			<TextInput source="lastName"/>
+// 			<TextInput source="email"/>
+// 			<PasswordInput source="password"/>
+// 		</SimpleForm>
+// 	</Create>
+//  );
